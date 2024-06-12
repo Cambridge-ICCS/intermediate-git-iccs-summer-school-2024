@@ -1,3 +1,6 @@
+import numpy as np
+
+
 def equation_of_line(a, b):
     """
     Determine the equation of the line passing through two points.
@@ -6,6 +9,8 @@ def equation_of_line(a, b):
     :arg b: the second point the line passes through
     :return: function of two variables defining the line
     """
+    if np.allclose(a, b):
+        raise ValueError("Cannot determine a unique line through {a} and {b}.")
     x0, y0 = a
     x1, y1 = b
 

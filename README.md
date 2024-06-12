@@ -1,4 +1,4 @@
-# Intermediate Git Tools
+# Intermediate Git and GitHub
 
 ## Assumed knowledge
 

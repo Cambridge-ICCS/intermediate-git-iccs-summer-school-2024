@@ -16,4 +16,4 @@ def test_equation(a, b, condition):
     for (x, y) in [(i, j) for j in range(10) for i in range(10)]:
         iszero = np.isclose(f(x, y), 0)
         if (not iszero if condition(x, y) else iszero):
-            raise ValueError(f"f({x},{y}) {'!=' if condition(x, y) else '=='} 0")
+            raise AssertionError(f"f({x},{y}) {'!=' if condition(x, y) else '=='} 0")

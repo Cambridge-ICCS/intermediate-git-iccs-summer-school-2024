@@ -15,4 +15,5 @@ def test_equation(a, b, condition):
     f = equation_of_line(a, b)
     for (x, y) in [(i, j) for j in range(10) for i in range(10)]:
         iszero = np.isclose(f(x, y), 0)
-        assert iszero if condition(x, y) else not iszero
+        if (not iszero if condition(x, y) else iszero):
+            raise ValueError(f"f({x},{y}) {'!=' if condition(x, y) else '=='} 0")

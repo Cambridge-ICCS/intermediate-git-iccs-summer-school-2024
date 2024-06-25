@@ -55,4 +55,7 @@ problems to solve:
 4. I want to change the 'base' of my branch to start at the head of another
    branch.
 
+For tasks 1-3, see the commit messages when you call either `git log` or `git
+rebase -i`. For task 4, rebase the branch on top of the most recent `main`.
+
 [1]: https://github.com/Cambridge-ICCS/git-intro-iccs-summer-school-2024

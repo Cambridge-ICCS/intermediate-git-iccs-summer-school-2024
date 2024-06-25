@@ -45,4 +45,6 @@ repository and run
 pytest -v test_maths.py
 ```
 
+## Rebase exercise
+
 [1]: https://github.com/Cambridge-ICCS/git-intro-iccs-summer-school-2024

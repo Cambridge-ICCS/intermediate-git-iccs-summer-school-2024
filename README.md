@@ -47,6 +47,12 @@ pytest -v test_maths.py
 
 ## Rebase exercise
 
-The branch `rebase-exercise` exists as an exercise for attendees.
+The branch `rebase-exercise` exists as an exercise for attendees. Some common
+problems to solve:
+1. I want to drop some commits from my branch.
+2. I want to reword a commit message.
+3. I want to squash some commits in my branch.
+4. I want to change the 'base' of my branch to start at the head of another
+   branch.
 
 [1]: https://github.com/Cambridge-ICCS/git-intro-iccs-summer-school-2024

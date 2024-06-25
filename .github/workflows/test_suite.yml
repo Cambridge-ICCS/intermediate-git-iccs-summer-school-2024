@@ -1,0 +1,47 @@
+# Test suite workflow
+name: Test suite
+
+# Controls when the workflow will run
+on:
+
+  # Triggers the workflow on pushes to the 'main' branch
+  push:
+    branches: ["main"]
+
+  # Triggers the workflow on pushes to pull requests
+  pull_request:
+
+  # Enables running workflows manually from the Actions tab
+  workflow_dispatch:
+
+# Details of the workflow run
+jobs:
+
+  # This workflow contains a single job called 'test_suite'
+  test_suite:
+
+    # The type of runner the job will run on
+    runs-on: ubuntu-latest
+
+    # Sequence of tasks to execute in the job
+    steps:
+
+      # Checkout the repository
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Install Python 3
+      - name: Install Python
+        uses: actions/setup-python3@v5
+        with:
+          python-version: '3.x'
+
+      # Install dependencies of the repository
+      - name: Install dependencies
+        run: |
+          python3 -m pip install -r requirements.txt
+
+      # Run the tests
+      - name: Run tests
+        run: |
+          pytest -v

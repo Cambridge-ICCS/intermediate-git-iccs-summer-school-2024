@@ -7,7 +7,7 @@ import pytest
     "a,b,condition",
     [
         ((0, 0), (0, 1), lambda x, y: x == 0),
-        ((0, 0), (1, 0), lambda x, y: y == 0),
+        ((0, 0), (1, 0), lambda x, y: x == 0),
         ((0, 0), (1, 1), lambda x, y: x == y),
     ]
 )

@@ -39,7 +39,8 @@ jobs:
       # Install dependencies of the repository
       - name: Install dependencies
         run: |
-          python3 -m pip install -r requirements.txt
+          # deliberately remove installation of dependencies
+          # python3 -m pip install -r requirements.txt
 
       # Run the tests
       - name: Run tests

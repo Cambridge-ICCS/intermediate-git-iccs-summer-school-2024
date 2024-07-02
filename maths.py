@@ -1,6 +1,3 @@
-import numpy as np
-
-
 def equation_of_line(a, b):
     """
     Determine the equation of the line passing through two points.

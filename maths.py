@@ -1,3 +1,4 @@
+from sympy import Line, Point2D
 import numpy as np
 
 
@@ -11,10 +12,9 @@ def equation_of_line(a, b):
     """
     if np.allclose(a, b):
         raise ValueError("Cannot determine a unique line through {a} and {b}.")
-    x0, y0 = a
-    x1, y1 = b
+    line = Line(Point2D(a), Point2D(b))
 
-    def f(x, y):
-        return (x1 - x0) * (y - y0) - (y1 - y0) * (x - x0)
+    def evaluate(x, y):
+        return float(line.distance(Point2D((x, y))))
 
-    return f
+    return evaluate

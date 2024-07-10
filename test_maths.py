@@ -17,3 +17,8 @@ def test_equation(a, b, condition):
         iszero = np.isclose(f(x, y), 0)
         if (not iszero if condition(x, y) else iszero):
             raise AssertionError(f"f({x},{y}) {'!=' if condition(x, y) else '=='} 0")
+
+
+def test_single_point():
+    with pytest.raises(ValueError):
+        equation_of_line((0, 0), (0, 0))

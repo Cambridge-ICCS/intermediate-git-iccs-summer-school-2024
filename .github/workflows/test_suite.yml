@@ -39,7 +39,11 @@ jobs:
       # Install dependencies of the repository
       - name: Install dependencies
         run: |
-          python3 -m pip install -r requirements.txt
+          # deliberately remove installation of dependencies
+          # python3 -m pip install -r requirements.txt
+
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
 
       # Run the tests
       - name: Run tests

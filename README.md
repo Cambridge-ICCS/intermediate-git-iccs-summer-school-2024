@@ -11,6 +11,12 @@ In this course, we assume familiarity with the following Git commands and GitHub
 If these are new to you then please join the
 [*Introduction to Git and GitHub for Beginners* course][1], which is running in parallel.
 
+## Accompanying slides
+
+Please click
+[here](https://hackmd.io/@jwallwork/2024-07-10-intermediate-git-tools?type=slide#/)
+to access to the accompanying slides.
+
 ## The example code
 
 This repository contains example code in a Python module `maths.py`. This module
